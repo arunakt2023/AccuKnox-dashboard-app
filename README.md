@@ -1,70 +1,76 @@
-# Getting Started with Create React App
+CNAPP Dashboard
+----------------
+This project is a Cloud Security Posture Management (CSPM) Dashboard built using React.js, Redux and Material-UI (MUI). The dashboard provides a comprehensive overview of cloud accounts, their risk management, and other related metrics.The modular design allows users to add custom widgets to personalize their dashboard according to their needs.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Features
+----------
 
-## Available Scripts
+    Responsive Layout: The dashboard is responsive and adapts to various screen sizes.
+    Customizable Widgets: Users can add and remove widgets from the dashboard.
+    Visual Data Representation: Uses donut charts and assessment bars to represent data visually.
+    Modular Design: Easy to extend with additional widgets or features.
 
-In the project directory, you can run:
+    Technologies Used
+    ------------------
 
-### `npm start`
+    * React.js: A JavaScript library for building user interfaces.
+    * Material-UI (MUI): A popular React UI framework for designing responsive and customizable user interfaces.
+    * JavaScript (ES6+): Modern JavaScript features for cleaner and more efficient code.
+    * HTML5 & CSS3: Standard web technologies for structure and styling.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+    CNAPP-dashboard/
+ *********************
+│
+├── src/
+│   ├── components/
+│   │   ├          
+│   │   │         
+│   │   ├── Header.js               # Header component
+│   │   ├── AssessmentBar.js        # Bar component for assessment data
+│   │   ├── AddWidgetModal.js       # Modal component for adding new widgets
+│   │   ├── Dashboard.js            # Main Dashboard component
+│   │   ├── DonutChart.js           # Donut chart component for visualizing data
+│   │   ├── NoGraphData.js          # Component to display when there is no graph data
+│   │   ├── CNAPPDashboard.js       # CNAPP-specific dashboard component
+│   │
+│   └── App.js                      # Entry point of the application
+│
+├── redux/
+│   ├── actions.js                  # Redux action definitions
+│
+├── store/
+│   ├── dashboardSlice.js           # Redux slice for the dashboard
+│   ├── index.js                    # Redux store configuration
+│
+├── public/
+│   ├── index.html                  # Main HTML file
+│
+├── README.md                       # Project documentation
+├── package.json                    # Project dependencies and scripts
+└── .gitignore                      # Files and directories to ignore in version control
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Starting the Project :
+>>>>>>>>>>>>>>>>>>>> 
+        Create reactjs app using npx create-react-app dashboard-app
+        npm install @reduxjs/toolkit react-redux
+ 
+        using editor as # Visual studio code #
+      Clone the repository:git clone https://github.com/arunakt2023/AccuKnox-dashboard-app.git
+Install dependencies:npm install
+Start the Development Server : npm start
+        Open browser and navigate to http://localhost:3000 to view the dashboard.
 
-### `npm run build`
+        
+        Usage:
+        ------
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    Add Widgets: Click on the "Add Widget" box to open the modal and add new widgets to the dashboard.
+    View Data: Visualize the cloud account data and other security metrics through the provided charts.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Customization:
+--------------
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    Modify or Add Widgets: Customize existing widgets or create new ones by adding components to the components directory.
+    Styling: Modify the existing styles or add new ones using MUI's styling solution.

@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Provider } from 'react-redux';
+import { store } from './store';
+import Dashboard from './components/Dashboard';
+import AddWidget from './components/AddWidget';
+import Header from './components/Header';
+import CNAPPDashboard from './components/CNAPPDashboard';
+import { Box, Container, Paper } from '@mui/material';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <Container sx={{ paddingY: 4 }}>
+        <Paper elevation={3}>
+          {/* Header */}
+          <Header />
+
+          {/* Main Content */}
+          <Box sx={{ padding: 2 }}>
+            {/* CNAPP Dashboard Section */}
+            <CNAPPDashboard />
+            
+            {/* Widgets and AddWidget Components */}
+            <AddWidget />
+            <Dashboard />
+          </Box>
+        </Paper>
+      </Container>
+    </Provider>
   );
 }
 
